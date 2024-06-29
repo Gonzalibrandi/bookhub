@@ -19,6 +19,10 @@
 <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+    .upbutton-position {
+      bottom: 20px;
+      right: 80px; /* Ajusta este valor para mover más a la izquierda */
+    }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -95,6 +99,17 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+      button{
+        border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+         transition: transform .5s ease-in-out;
+        margin-left:10px;
+      }
+      button:hover{
+        transform: rotate(360deg);
+      }
     </style>
 
     
@@ -124,20 +139,20 @@
               data-bs-toggle="dropdown"
               aria-label="Toggle theme (auto)">
         <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        <span class="visually-hidden" id="bd-theme-text">Cambiar tema</span>
       </button>
       <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
         <li>
           <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
             <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
+            Claro
             <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
           </button>
         </li>
         <li>
           <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
             <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
+            Oscuro
             <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
           </button>
         </li>
@@ -151,6 +166,11 @@
       </ul>
     </div>
 
+    <div class="dropdown position-fixed upbutton-position bd-mode-toggle">
+      <a href="#" class="btn btn-dark ">
+        <img src="./up_arrow.png" class="bd-placeholder-img card-img-top" width="100%" height="35" alt="uparrow">
+      </a>
+    </div>
 
     <!-- <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -166,9 +186,10 @@
       </ul>
     </header> --> 
 
+
     <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <header class="d-flex flex-wrap justify-content-center py-2 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-4 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24" transform="rotate(90)"><path d="M2 7v13a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M2 7a2 2 0 0 0 2-2V2h16v3a2 2 0 0 0 2 2"/></svg>
           <span class="fs-4">BookHub</span>
         </a>
@@ -181,6 +202,7 @@
         </ul>
       </header>
     </div>
+    
     
 <!-- <header data-bs-theme="dark">
   <div class="collapse text-bg-dark" id="navbarHeader">
@@ -441,5 +463,5 @@
 </footer>
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    </body>
+</body>
 </html>

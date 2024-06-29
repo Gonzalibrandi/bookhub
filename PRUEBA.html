@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Header Fijo y Flecha para Subir</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 80px; /* Ajusta según la altura de tu header */
+    }
+    #backToTop {
+      display: none; /* Oculto por defecto */
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #000;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+    #backToTop:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom fixed-top bg-dark text-white">
+    <div class="container d-flex flex-wrap justify-content-center align-items-center">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24" transform="rotate(90)"><path d="M2 7v13a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M2 7a2 2 0 0 0 2-2V2h16v3a2 2 0 0 0 2 2"/></svg>
+        <span class="fs-4">BookHub</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Mi Perfil</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">BookHub</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Botón para subir al inicio -->
+  <button onclick="topFunction()" id="backToTop" class="btn btn-dark">↑</button>
+
+  <!-- Contenido de la página -->
+  <div class="container mt-5">
+    <h1>Contenido de la Página</h1>
+    <p>Aquí puedes poner el contenido de tu página. Este contenido es un ejemplo para mostrar el desplazamiento con la barra de navegación fija.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent scelerisque metus a massa congue, ac convallis orci scelerisque. Nullam ut ullamcorper dui. Etiam commodo orci id arcu vehicula, sit amet viverra tortor fringilla. Donec a ultrices arcu. Suspendisse malesuada magna nec lorem mollis, ac eleifend ligula dapibus. Integer semper felis nec lacus cursus, et eleifend magna fermentum. Aliquam erat volutpat. Nulla facilisi. Donec convallis, massa in tincidunt tincidunt, augue ligula facilisis enim, eget dapibus arcu purus vel risus.</p>
+    <p>Morbi tincidunt convallis libero, et ullamcorper elit ullamcorper ac. Mauris faucibus turpis at arcu luctus, at malesuada sapien egestas. Ut at eros elit. Duis tincidunt ullamcorper neque, non sagittis risus ultricies eget. In et nulla non elit scelerisque laoreet a sit amet ligula. Vestibulum facilisis bibendum felis id hendrerit. Praesent sit amet leo id augue euismod bibendum. Vivamus facilisis orci a augue sollicitudin, non fermentum orci pretium. Nulla in scelerisque orci. Proin a malesuada sapien. In non cursus metus, in aliquet tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin consectetur consectetur mi, non dignissim lectus mollis eu. Nunc vitae leo nulla.</p>
+    <p>Phasellus a velit bibendum, aliquam felis eu, tristique nunc. Integer vehicula nisl non turpis dapibus, sit amet interdum turpis gravida. Nam nec convallis dolor. Curabitur porttitor pharetra orci, nec tincidunt tortor venenatis non. Ut id sem nec ligula laoreet efficitur sit amet sit amet sem. Donec vel sapien vitae justo sagittis accumsan. Nunc et velit lacus. Morbi maximus malesuada sapien at convallis. Sed consequat nisi vel risus posuere volutpat. Cras tincidunt orci eu urna ultrices, ac euismod odio dapibus. Nullam venenatis massa nec tellus volutpat dapibus.</p>
+    <p>Nullam bibendum ultricies dignissim. Aenean ut semper eros. Morbi vel purus ac augue efficitur vestibulum at vel lorem. Etiam sagittis urna a felis dignissim, in viverra metus laoreet. Etiam pulvinar vel lorem vel interdum. Donec ut nulla sed metus scelerisque vehicula. Nullam non libero a odio fermentum pharetra non in risus. Cras pulvinar metus id lectus pretium, ut gravida metus lacinia. Curabitur ut metus vitae orci auctor tempor ut eu arcu. Aliquam erat volutpat. Etiam auctor congue dolor sit amet consequat. Sed facilisis augue ac sapien iaculis, ut vestibulum purus tincidunt. Suspendisse et gravida libero. Nullam suscipit metus non cursus ultricies.</p>
+  </div>
+
+  <script>
+    // Obtener el botón
+    var mybutton = document.getElementById("backToTop");
+
+    // Mostrar el botón cuando el usuario se desplace hacia abajo 20px desde la parte superior del documento
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // Cuando el usuario haga clic en el botón, se desplazará hacia la parte superior de la página
+    function topFunction() {
+      document.body.scrollTop = 0; // Para Safari
+      document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+    }
+  </script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
