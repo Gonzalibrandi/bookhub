@@ -112,11 +112,35 @@
         padding: 0.375rem 0.75rem; /* Padding similar al botón de Bootstrap */
         font-size: 1rem; /* Tamaño de fuente */
         border-radius: 0.25rem; /* Borde redondeado */
+        transition: all 0.5s;
+        cursor: pointer;
         }
         .btn-aqua:hover {
         background-color: #1aa487; /* Color verde agua oscuro al pasar el ratón */
         border-color: #1aa487; /* Borde del mismo color */
         }
+        .btn-aqua span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+        .btn-aqua span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -100px;
+        transition: 0.5s;
+        }
+        .btn-aqua:hover span {
+        padding-right: 20px;
+        }
+        .btn-aqua:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
+
     </style>
     <script>
         function validateForm(event) {
@@ -205,7 +229,9 @@
                 </label>
             </div>
             <a href="./signup.html">No tengo cuenta</a>
-            <button class="btn btn-aqua w-100 py-2" type="submit" style="margin-top: 20px;" >Iniciar sesion</button>
+            <!--
+            <button class="btn btn-aqua w-100 py-2" type="submit" style="margin-top: 20px;" >Iniciar sesion</button> -->
+            <button class="btn-aqua w-100 py-2"><span>Iniciar sesion</span></button>
         </form>
     </main>
 
