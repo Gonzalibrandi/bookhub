@@ -100,6 +100,14 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+      .btn-circle {
+        cursor: pointer;
+        transition: transform 0.6s ease;
+        transform-origin: center;
+      }
+      .btn-circle:hover {
+            transform: rotate(360deg);
+      }
     </style>
     <script>
       function scrollToTop() {
@@ -162,8 +170,8 @@
     </div>
 
   <!-- BOTON DE VOLVER A ARRIBA -->
-    <div class="dropdown position-fixed upbutton-position bd-mode-toggle" onclick="scrollToTop()">
-        <img src="./up_arrow_chica.png" class="bd-placeholder-img card-img-top" width="100%" height="35" alt="uparrow">
+    <div class="dropdown position-fixed upbutton-position bd-mode-toggle btn-circle" onclick="scrollToTop()">
+        <img src="./up_arrow_chica.png" class="bd-placeholder-img card-img-top btn-circle" width="100%" height="35" alt="uparrow">
       </a>
     </div>
 
