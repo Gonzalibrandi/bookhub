@@ -105,12 +105,25 @@
             font-size: 4rem;
             color: #99DD99
         }
+        .btn-aqua {
+        background-color: #99DD99; /* Color verde agua */
+        color: rgb(0, 0, 0); /* Color del texto */
+        border: 1px solid #99DD99; /* Borde del mismo color */
+        padding: 0.375rem 0.75rem; /* Padding similar al botón de Bootstrap */
+        font-size: 1rem; /* Tamaño de fuente */
+        border-radius: 0.25rem; /* Borde redondeado */
+        }
+        .btn-aqua:hover {
+        background-color: #1aa487; /* Color verde agua oscuro al pasar el ratón */
+        border-color: #1aa487; /* Borde del mismo color */
+        }
     </style>
     <script>
         function validateForm(event) {
             event.preventDefault(); // Evitar que el formulario se envíe
             const username = document.querySelector('input[name="username"]').value;
             const password = document.querySelector('input[name="password"]').value;
+            /* si el usuario existe o pertenece a la BD*/
             if (username === 'admin' && password === 'admin') {
                 window.location.href = "index.html";
             } else {
@@ -192,7 +205,7 @@
                 </label>
             </div>
             <a href="./signup.html">No tengo cuenta</a>
-            <button class="btn btn-primary w-100 py-2" type="submit" style="margin-top: 20px;">Iniciar Sesion</button>
+            <button class="btn btn-aqua w-100 py-2" type="submit" style="margin-top: 20px;" >Iniciar sesion</button>
         </form>
     </main>
 
