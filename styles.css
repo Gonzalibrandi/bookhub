@@ -185,8 +185,9 @@
         background-position: calc(50% - 80px) center; /* Centra la imagen */
         background-repeat: no-repeat; /* Evita que la imagen se repita */
       }
+
       .login_text{
-        color:#D1D0C2;
+        color:#D1D0C2
       }
     }
     .bg_yllw{
