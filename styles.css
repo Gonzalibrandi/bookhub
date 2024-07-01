@@ -147,14 +147,19 @@
     right: 0;
     }
     [data-bs-theme="verde"] {
-      --bs-body-bg: #ffffff;
-      --bs-body-color: #006400;
-      --bs-link-color: #32CD32;
-      --bs-link-hover-color: #228B22;
+      --bs-body-bg: rgb(255, 255, 255);
+      --bs-body-color: #000000; /* 'ingresa a tu cuenta' y*/
       --bs-btn-primary-bg: #32CD32;
       --bs-btn-primary-border-color: #228B22;
       --bs-secondary: #6c757d;
-      --bs-secondary-text-emphasis: #2b2f32;
+      --bs-primary-text-emphasis: #ff1e00;
+      --bs-secondary-text-emphasis: #ff0000;
+      --bs-success-text-emphasis: #75b798;
+      --bs-info-text-emphasis: #6edff6;
+      --bs-warning-text-emphasis: #ffda6a;
+      --bs-danger-text-emphasis: #ff0015;
+      --bs-light-text-emphasis: #f8f9fa;
+      --bs-dark-text-emphasis: #dee2e6;
       --bs-secondary-bg-subtle: #D1D0C2;
       --bs-secondary-border-subtle: #D1D0C2;
       --bs-secondary-color: rgba(0, 0, 0, 0.75);
@@ -162,5 +167,25 @@
       --bs-body-bg-tertiary: #000000;
       --bs-tertiary-color-rgb: 222, 226, 230;
       --bs-tertiary-bg-rgb: 209, 208, 194;
+      --bs-link-color-rgb: 0,0,0
+      --bs-link-decoration: underline;
+      --bs-link-hover-color-rgb: 0,0,0
+      --bs-highlight-color: #dee2e6;
+      --bs-highlight-bg: #664d03;
+      --bs-border-color: #495057;
+      --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+      --bs-form-valid-color: #f70d0d;
+      --bs-form-valid-border-color: #ff0000;
+      --bs-form-invalid-color: #050404;
+      --bs-form-invalid-border-color: #000000;
+      .login_bg{
+        height: 100vh;
+        background-image: url('./login_bg_leaf.png');
+        background-size: 50%; /* Hace que la imagen cubra todo el área del elemento */
+        background-position: calc(50% - 80px) center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+      }
+      .login_text{
+        color:#D1D0C2;
+      }
     }
-    
