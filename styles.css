@@ -98,6 +98,8 @@
     }
     .TituloPersonalizado {
         font-family: 'BookHubFont', sans-serif;
+        /*background-color: #10844B;*/
+        /*background-image: url(./logo.png);*/
         color: #99DD99
     }
     .TituloPersonalizado-Grande{
@@ -144,3 +146,21 @@
     opacity: 1;
     right: 0;
     }
+    [data-bs-theme="verde"] {
+      --bs-body-bg: #ffffff;
+      --bs-body-color: #006400;
+      --bs-link-color: #32CD32;
+      --bs-link-hover-color: #228B22;
+      --bs-btn-primary-bg: #32CD32;
+      --bs-btn-primary-border-color: #228B22;
+      --bs-secondary: #6c757d;
+      --bs-secondary-text-emphasis: #2b2f32;
+      --bs-secondary-bg-subtle: #D1D0C2;
+      --bs-secondary-border-subtle: #D1D0C2;
+      --bs-secondary-color: rgba(0, 0, 0, 0.75);
+      --bs-secondary-bg: #080909;
+      --bs-body-bg-tertiary: #000000;
+      --bs-tertiary-color-rgb: 222, 226, 230;
+      --bs-tertiary-bg-rgb: 209, 208, 194;
+    }
+    
