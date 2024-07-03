@@ -178,7 +178,7 @@
       --bs-form-valid-border-color: #ff0000;
       --bs-form-invalid-color: #050404;
       --bs-form-invalid-border-color: #000000;
-      .login_bg{
+      .hojita_bg{
         height: 100vh;
         background-image: url('./login_bg_leaf.png');
         background-size: 50%; /* Hace que la imagen cubra todo el área del elemento */
@@ -188,6 +188,10 @@
 
       .login_text{
         color:#D1D0C2
+      }
+
+      .bg_otrocolor{
+        background-color: #ffffffff
       }
     }
     .bg_yllw{
