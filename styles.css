@@ -185,11 +185,9 @@
         background-position: calc(50% - 80px) center; /* Centra la imagen */
         background-repeat: no-repeat; /* Evita que la imagen se repita */
       }
-
       .login_text{
         color:#D1D0C2
       }
-
       .bg_otrocolor{
         background-color: #ffffffff
       }
@@ -249,5 +247,18 @@
     .col:nth-child(12){
       transition-delay: 480ms;
     }
-
     /*UNA COL A DER Y OTRA A IZQ PODRIA HACERSE*/
+
+    [data-bs-theme="verde"] .btn-header-active {
+      background-color: #1a7510 !important;
+      }
+    [data-bs-theme="verde"] .btn-header {
+      color: #1a7510 !important;
+    }
+    [data-bs-theme="dark"] .btn-header-active {
+      background-color: #99DD99 !important;
+      color:rgb(0, 0, 0)!important;
+    }
+    [data-bs-theme="dark"] .btn-header {
+      color: #99DD99 !important
+    }
