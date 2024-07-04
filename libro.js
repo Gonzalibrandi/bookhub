@@ -8,8 +8,18 @@ function getQueryParams() {
     return params;
 }
 
+function loadBooks() {
+    return fetch('allBooks.json')
+        .then(response => response.json())
+        .then(data => {
+            books = data;
+        })
+        .catch(error => console.error('Error loading books:', error));
+}
+//EL FETCH SOLO ANDA PARA SERVERS!!
+
 // Datos de ejemplo para los libros
-const books = {
+/*const books = {
     1: {
         title: "Harry Potter y el prisionero de Azkaban",
         pages: 480,
@@ -24,9 +34,9 @@ const books = {
         date: "15/6/2023",
         description: "Descripción del libro Harry Potter y la piedra filosofal..."
     }
-    // Añade más libros aquí
+    // AÑADIR libros en otro formato (no const)
 };
-
+*/
 
 // Función para mostrar los detalles del libro
 function showBookDetails() {
@@ -47,23 +57,18 @@ function showBookDetails() {
                     <p class="card-text">${book.description}</p>
                     <p class="card-text"><small class="text-muted">${book.pages} páginas</small></p
                     <p class="card-text"><small class="text-muted"> Publicado el ${book.date}</small></p
-
                 </div>
             </div>
         `;
     } else {
         document.getElementById('book-details').innerHTML = '<p>Libro no encontrado</p>';
     }
+    // AGREGAR: USUARIO QUE LO PUBLICO, Y SU REPUTACION
 }
-/*
-<p><strong>Nombre del libro:</strong> Nombre del libro/p>
-<p><strong>Publicado hace:</strong> 2 semanas</p>
-<p><strong>Otros libros del propietario:</strong> Libro 1, Libro 2, Libro 3</p>
-<p><strong>Reseñas del propietario:</strong> 5</p>
-*/
 
-// Ejecutar la función cuando la página haya cargado
-window.onload = showBookDetails;
+window.onload = function() {
+    loadBooks().then(showBookDetails);
+};
 
 /*
 // Función para mostrar los detalles del libro

@@ -1,0 +1,16 @@
+{
+    "1": {
+      "title": "Harry Potter y el prisionero de Azkaban",
+      "pages": 480,
+      "image": "./HP3.jpg",
+      "date": "10/5/2023",
+      "description": "Descripción del libro Harry Potter y el prisionero de Azkaban..."
+    },
+    "2": {
+      "title": "Harry Potter y la piedra filosofal",
+      "pages": 320,
+      "image": "./HP1.png",
+      "date": "15/6/2023",
+      "description": "Descripción del libro Harry Potter y la piedra filosofal..."
+    }
+  }
