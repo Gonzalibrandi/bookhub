@@ -14,7 +14,7 @@ function loadBooks() {
         .then(data => {
             books = data;
         })
-        .catch(error => console.error('Error loading books:', error));
+        .catch(error => console.error('Error cargando libro:', error));
 }
 //EL FETCH SOLO ANDA PARA SERVERS!!
 
@@ -57,6 +57,7 @@ function showBookDetails() {
                     <p class="card-text">${book.description}</p>
                     <p class="card-text"><small class="text-muted">${book.pages} páginas</small></p
                     <p class="card-text"><small class="text-muted"> Publicado el ${book.date}</small></p
+                    <p class="card-text"><small class="text-muted"> Publicado por ....</small></p
                 </div>
             </div>
         `;
