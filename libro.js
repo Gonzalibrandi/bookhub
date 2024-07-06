@@ -1,3 +1,5 @@
+let books = {};
+
 // Función para obtener los parámetros de la URL
 function getQueryParams() {
     const params = {};
@@ -12,6 +14,7 @@ function loadBooks() {
     return fetch('allBooks.json')
         .then(response => response.json())
         .then(data => {
+            console.log('Data:', data);
             books = data;
         })
         .catch(error => console.error('Error cargando libro:', error));

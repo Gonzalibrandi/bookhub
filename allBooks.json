@@ -8,9 +8,23 @@
     },
     "2": {
       "title": "Harry Potter y la piedra filosofal",
-      "pages": 320,
+      "pages": 500,
       "image": "./HP1.png",
       "date": "15/6/2023",
       "description": "Descripción del libro Harry Potter y la piedra filosofal..."
+    },
+    "3": {
+      "title": "El principto",
+      "pages": 92,
+      "image": "./P.png",
+      "date": "11/1/2024",
+      "description": "Descripción del libro el principito..."
+    },
+    "4": {
+      "title": "Don Quijote de la Mancha",
+      "pages": 462,
+      "image": "./DQM.png",
+      "date": "22/4/2024",
+      "description": "Descripción del libro Don Quijote de la Mancha..."
     }
-  }
+}
