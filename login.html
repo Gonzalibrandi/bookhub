@@ -24,6 +24,25 @@
             } else {
                 alert('Usuario o contraseña incorrectos');
             }
+        };
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('theme', theme);
+        }
+
+        // Función para obtener el tema guardado o el tema por defecto
+        function getTheme() {
+            return localStorage.getItem('theme') || 'verde';
+        }
+
+        // Aplicar el tema cuando se carga la página
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setTheme(getTheme());
+        });
+
+        // Función para cambiar el tema
+        function toggleTheme(theme) {
+            setTheme(theme);
         }
     </script>
 
