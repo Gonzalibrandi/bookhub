@@ -10,8 +10,9 @@ function getQueryParams() {
     return params;
 }
 
+const timestamp = new Date().getTime();
 function loadBooks() {
-    return fetch('allBooks.json')
+    return fetch(`allBooks.json?t=${timestamp}`)
         .then(response => response.json())
         .then(data => {
             console.log('Data:', data);
@@ -73,6 +74,8 @@ function showBookDetails() {
 window.onload = function() {
     loadBooks().then(showBookDetails);
 };
+setInterval(loadBooks().then(showBookDetails), 600);
+
 
 /*
 // Función para mostrar los detalles del libro
