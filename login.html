@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <script>
+        //autenticacion
         function validateForm(event) {
             event.preventDefault(); // Evitar que el formulario se envíe
             const username = document.querySelector('input[name="username"]').value;
@@ -25,9 +26,12 @@
                 alert('Usuario o contraseña incorrectos');
             }
         };
+        // FUNCIONES PARA QUE EL TEMA POR DEFAULT SEA VERDE Y NO HAYA BUGS.
+        // Función para establecer el tema
         function setTheme(theme) {
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
+            updateActiveThemeIcon(theme);
         }
 
         // Función para obtener el tema guardado o el tema por defecto
@@ -35,15 +39,33 @@
             return localStorage.getItem('theme') || 'verde';
         }
 
-        // Aplicar el tema cuando se carga la página
-        window.addEventListener('DOMContentLoaded', (event) => {
-            setTheme(getTheme());
-        });
-
-        // Función para cambiar el tema
-        function toggleTheme(theme) {
-            setTheme(theme);
+        // Función para actualizar el icono activo del tema
+        function updateActiveThemeIcon(theme) {
+            document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                element.classList.remove('active');
+                element.setAttribute('aria-pressed', 'false');
+            });
+            
+            const activeThemeIcon = document.querySelector(`[data-bs-theme-value="${theme}"]`);
+            if (activeThemeIcon) {
+                activeThemeIcon.classList.add('active');
+                activeThemeIcon.setAttribute('aria-pressed', 'true');
+            }
         }
+
+        // Aplicar el tema y configurar los eventos cuando se carga la página
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const currentTheme = getTheme();
+            setTheme(currentTheme);
+            
+            // Configurar los eventos de clic para los botones de tema
+            document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const theme = toggle.getAttribute('data-bs-theme-value');
+                    setTheme(theme);
+                });
+            });
+        });
     </script>
 
 </head>
